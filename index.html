@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuffle Cards</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <div class="content">
+            <div class="title"><p>Shuffle and Sort</p></div>
+            <div class="greybg">
+                <div class="d-flex align-items-center justify-content-between flexCol">
+                    <div id="shufflenumber" class="gridlayer"></div>
+                    <div class="actioncol">
+                        <button class="primarybtn" onclick="randomArrayShuffle()">Shuffle</button>
+                        <button class="primarybtn" onclick="sort()">Sort</button>
+                    </div>
+                </div>
+                <p class="authorinfo pl-5">Shuffle & sort by Keshava</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <script>
+            // Initializing array 
+            numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            // Create element on Load 
+            createEle();
+
+            // Function to create HTML elements
+            function createEle() {
+                let ele =  document.getElementById('shufflenumber');
+                numbers.forEach((item)=>{
+                    let li = document.createElement("button");
+                    li.className = "shufflecard"+ item;
+                    li.innerText = item;
+                    ele.appendChild(li);
+                });
+            }
+
+            //Functio to Arrange numbers in randomly
+            function randomArrayShuffle (data){
+                //Empty the Content 
+                document.getElementById('shufflenumber').innerHTML = "";
+                numbers = numbers.sort(function(){ return Math.random() - 0.5});
+                createEle();
+            }
+
+            //Functio to sort the Array
+            function sort(data) {
+                //Empty the Content 
+                document.getElementById('shufflenumber').innerHTML = "";
+                numbers = numbers.sort();
+                createEle();
+            }
+    </script>
+</body>
+</html>
