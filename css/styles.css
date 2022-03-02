@@ -1,0 +1,173 @@
+body, html {
+    margin:0px;
+    font-family: sans-serif;
+}
+.content {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+.d-flex {
+    display: flex;
+}
+.align-items {
+    align-items: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.gridlayer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 0.85;
+}
+.actioncol {
+    flex: 0.15;
+    margin: 1rem 2rem;
+}
+.title {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0rem 0;
+    color: #333333;
+    font-weight: bold;
+}
+.title p {
+    margin: 0rem 0;
+}
+.gridlayer button {
+    padding:2.5rem 0rem;
+    color: #ffffff;
+    font-size: 4rem; 
+}
+.shufflecard4{
+    background: #72C3DC;
+}
+.shufflecard9, .shufflecard1 {
+    background: #2B8EAD;
+}
+.shufflecard3,  .shufflecard9 {
+    background: #2F454E;
+}
+.shufflecard5, .shufflecard2 {
+    background: #6F98A8;
+}
+.shufflecard6, .shufflecard7 {
+    background: #BFBFBF;
+}
+
+.primarybtn {
+    display: block;
+    width: 200px;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #72C3DC;
+    padding: 15px 50px;
+    margin: 25px 22px 0 10px;
+    border: 1px solid #2B8EAD;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px #2B8EAD;
+    color: #FFFFFF;
+    transition: all 0.512ms ease;
+    padding: 1em 1em;
+    min-width: 100px;
+}
+.primarybtn:hover {
+    box-shadow: 0px 8px 0px #2B8EAD;
+    transition: all 0.512ms ease;
+}
+
+.authorinfo {
+    font-style: italic;
+    font-size: 12px;
+    margin: 0 0 5px;
+    padding: 1rem 0;
+}
+
+/* Media queries  */
+@media (min-width:376px) {
+    .pl-5 {
+        margin-left: 20rem;
+    }
+    .greybg{
+        background: #EFEFEF;
+        border-top: 4px solid #BFBFBF;
+    }
+    .gridlayer button {
+        border: none;
+    }
+}
+
+
+
+@media (max-width: 375px) {
+    body {
+        border: 5px solid #000000;
+    }
+    .title {
+        background: #2F454E;
+        font-size: 1.5rem;
+        color: #fff;
+    } 
+    .primarybtn{
+        margin: 0 10px;
+    }
+    .gridlayer {
+        order:2;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        gap: 5px;
+    }
+    .flexCol{
+        flex-direction: column;
+    }
+    .actioncol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gridlayer button {
+        padding: 0.5rem 0rem;
+        font-size: 1.5rem;
+        border-width: 0 0 0 5px;
+    }
+    .authorinfo  {
+        text-align: center;
+    }
+    .gridlayer button {
+        background-color: #EFEFEF;
+        color: #000000;
+    }
+    .shufflecard4{
+        border-left: 5px solid #72C3DC;
+    }
+    .shufflecard9, .shufflecard1 {
+        border-left: 5px solid #2B8EAD;
+    }
+    .shufflecard3,  .shufflecard9 {
+        border-left: 5px solid #2F454E;
+    }
+    .shufflecard5, .shufflecard2 {
+        border-left: 5px solid #6F98A8;
+    }
+    .shufflecard6, .shufflecard7 {
+        border-left: 5px solid #BFBFBF;
+    } 
+}
+@media (min-width:376px) and (max-width: 650px) {
+    .primarybtn{
+        min-width: 110px;
+        width: auto;
+    }
+    .actioncol {
+        margin: -0.5rem 0.5rem;
+    }
+    .pl-5 {
+        margin-left: 3rem;
+    }
+    .gridlayer button {
+        font-size: 2rem;
+    }
+}
